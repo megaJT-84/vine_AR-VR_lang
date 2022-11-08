@@ -10398,6 +10398,7 @@ GameObject:
   - component: {fileID: 1629266908}
   - component: {fileID: 1629266910}
   - component: {fileID: 1629266909}
+  - component: {fileID: 1629266911}
   m_Layer: 0
   m_Name: mecha Cube
   m_TagString: Untagged
@@ -10698,6 +10699,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1629266911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629266895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07addea297fb64da5df064232390f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
 --- !u!1001 &1656310363
 PrefabInstance:
   m_ObjectHideFlags: 0
