@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/objects_interactions.unity
     guid: 67e0f44659955ce4ea28a90fc9dfda9b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/demo scene.unity
     guid: f7e2199972f3b714e98c1ea269794e47
+  - enabled: 1
+    path: Assets/Scenes/memory pal_semantic.unity
+    guid: 2d66b1b0f3b097c4bbb90e0174798e76
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 190874cd40d69574ab71f220624b4c9c, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: aca21eaf65b7b194e89943fd502f6f33, type: 2}
