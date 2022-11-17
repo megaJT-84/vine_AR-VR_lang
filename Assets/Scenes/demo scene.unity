@@ -880,11 +880,8 @@ GameObject:
   - component: {fileID: 183846478}
   - component: {fileID: 183846477}
   - component: {fileID: 183846476}
-  - component: {fileID: 183846475}
   - component: {fileID: 183846474}
   - component: {fileID: 183846473}
-  - component: {fileID: 183846484}
-  - component: {fileID: 183846483}
   m_Layer: 0
   m_Name: yellow cube
   m_TagString: Untagged
@@ -996,18 +993,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   elasticsManager: {fileID: 0}
---- !u!114 &183846475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183846471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &183846476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,30 +1146,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183846471}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &183846483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183846471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &183846484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183846471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &213273253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4930,43 +4891,43 @@ PrefabInstance:
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1629266909}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 475846486}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 906660895}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1233132291}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1768406767}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
-      objectReference: {fileID: 2042360102}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
-      objectReference: {fileID: 2141194939}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[7].m_Target
       value: 
-      objectReference: {fileID: 183846483}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Target
       value: 
-      objectReference: {fileID: 1626211424}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[9].m_Target
       value: 
-      objectReference: {fileID: 664019253}
+      objectReference: {fileID: 0}
     - target: {fileID: 7102484898435090800, guid: d82e2f09994ad2f4fb43359bfb977f64, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -5191,11 +5152,8 @@ GameObject:
   - component: {fileID: 475846473}
   - component: {fileID: 475846472}
   - component: {fileID: 475846480}
-  - component: {fileID: 475846482}
   - component: {fileID: 475846483}
   - component: {fileID: 475846484}
-  - component: {fileID: 475846486}
-  - component: {fileID: 475846485}
   m_Layer: 0
   m_Name: red cube
   m_TagString: Untagged
@@ -5371,18 +5329,6 @@ MonoBehaviour:
   additionalOffset: {x: 0, y: 0, z: 0}
   additionalRotation: {x: 0, y: 0, z: 0}
   updateSolvers: 1
---- !u!114 &475846482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475846471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &475846483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5472,30 +5418,6 @@ MonoBehaviour:
   pivotDistance: 0.25
   toolTipText: "\u03BA\u03CC\u03BA\u03BA\u03B9\u03BD\u03BF\u03C2 \u03BA\u03CD\u03B2\u03BF\u03C2"
   anchor: {fileID: 0}
---- !u!114 &475846485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475846471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &475846486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475846471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &480837967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1083549605185280, guid: afaef0108a478c44a9eac26658bc29bf, type: 3}
@@ -6086,11 +6008,8 @@ GameObject:
   - component: {fileID: 664019248}
   - component: {fileID: 664019247}
   - component: {fileID: 664019246}
-  - component: {fileID: 664019245}
   - component: {fileID: 664019244}
   - component: {fileID: 664019243}
-  - component: {fileID: 664019254}
-  - component: {fileID: 664019253}
   m_Layer: 0
   m_Name: orange cube
   m_TagString: Untagged
@@ -6202,18 +6121,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   elasticsManager: {fileID: 0}
---- !u!114 &664019245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664019241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &664019246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6367,30 +6274,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664019241}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &664019253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664019241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &664019254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664019241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &698454264
 GameObject:
   m_ObjectHideFlags: 0
@@ -7452,11 +7335,8 @@ GameObject:
   - component: {fileID: 906660890}
   - component: {fileID: 906660889}
   - component: {fileID: 906660888}
-  - component: {fileID: 906660887}
   - component: {fileID: 906660886}
   - component: {fileID: 906660885}
-  - component: {fileID: 906660896}
-  - component: {fileID: 906660895}
   m_Layer: 0
   m_Name: blue Cube
   m_TagString: Untagged
@@ -7494,7 +7374,7 @@ MonoBehaviour:
   focusEnabled: 1
   prefab: {fileID: 1083549605185280, guid: afaef0108a478c44a9eac26658bc29bf, type: 3}
   tooltipToggleAction:
-    id: 3
+    id: 0
     description: Grip Pose
     axisConstraint: 7
   appearType: 0
@@ -7568,18 +7448,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   elasticsManager: {fileID: 0}
---- !u!114 &906660887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906660883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &906660888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7733,30 +7601,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906660883}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &906660895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906660883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &906660896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906660883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &943969907
 GameObject:
   m_ObjectHideFlags: 0
@@ -9111,11 +8955,8 @@ GameObject:
   - component: {fileID: 1233132286}
   - component: {fileID: 1233132285}
   - component: {fileID: 1233132284}
-  - component: {fileID: 1233132283}
   - component: {fileID: 1233132282}
   - component: {fileID: 1233132281}
-  - component: {fileID: 1233132292}
-  - component: {fileID: 1233132291}
   m_Layer: 0
   m_Name: green cube
   m_TagString: Untagged
@@ -9227,18 +9068,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   elasticsManager: {fileID: 0}
---- !u!114 &1233132283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233132279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1233132284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9392,30 +9221,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233132279}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1233132291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233132279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1233132292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233132279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1264555820
 GameObject:
   m_ObjectHideFlags: 0
@@ -10058,11 +9863,8 @@ GameObject:
   - component: {fileID: 1626211418}
   - component: {fileID: 1626211417}
   - component: {fileID: 1626211416}
-  - component: {fileID: 1626211415}
   - component: {fileID: 1626211414}
   - component: {fileID: 1626211413}
-  - component: {fileID: 1626211424}
-  - component: {fileID: 1626211423}
   m_Layer: 0
   m_Name: purple Cube
   m_TagString: Untagged
@@ -10100,7 +9902,7 @@ MonoBehaviour:
   focusEnabled: 1
   prefab: {fileID: 1083549605185280, guid: afaef0108a478c44a9eac26658bc29bf, type: 3}
   tooltipToggleAction:
-    id: 3
+    id: 0
     description: Grip Pose
     axisConstraint: 7
   appearType: 0
@@ -10174,18 +9976,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   elasticsManager: {fileID: 0}
---- !u!114 &1626211415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626211411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1626211416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10339,30 +10129,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626211411}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1626211423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626211411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1626211424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626211411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1629266895
 GameObject:
   m_ObjectHideFlags: 0
@@ -10379,11 +10145,8 @@ GameObject:
   - component: {fileID: 1629266897}
   - component: {fileID: 1629266896}
   - component: {fileID: 1629266904}
-  - component: {fileID: 1629266906}
   - component: {fileID: 1629266907}
   - component: {fileID: 1629266908}
-  - component: {fileID: 1629266910}
-  - component: {fileID: 1629266909}
   - component: {fileID: 1629266911}
   m_Layer: 0
   m_Name: mecha Cube
@@ -10560,18 +10323,6 @@ MonoBehaviour:
   additionalOffset: {x: 0, y: 0, z: 0}
   additionalRotation: {x: 0, y: 0, z: 0}
   updateSolvers: 1
---- !u!114 &1629266906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629266895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1629266907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10638,7 +10389,7 @@ MonoBehaviour:
   focusEnabled: 1
   prefab: {fileID: 1083549605185280, guid: afaef0108a478c44a9eac26658bc29bf, type: 3}
   tooltipToggleAction:
-    id: 3
+    id: 0
     description: Grip Pose
     axisConstraint: 7
   appearType: 0
@@ -10661,30 +10412,6 @@ MonoBehaviour:
   pivotDistance: 0.25
   toolTipText: "\u03BA\u03CD\u03B2\u03BF \u03BA\u03BB\u03B5\u03B9\u03B4\u03B1\u03C1\u03B9\u03AC\u03C2"
   anchor: {fileID: 0}
---- !u!114 &1629266909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629266895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1629266910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629266895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1629266911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10966,11 +10693,8 @@ GameObject:
   - component: {fileID: 1768406761}
   - component: {fileID: 1768406760}
   - component: {fileID: 1768406759}
-  - component: {fileID: 1768406758}
   - component: {fileID: 1768406757}
   - component: {fileID: 1768406756}
-  - component: {fileID: 1768406767}
-  - component: {fileID: 1768406766}
   m_Layer: 0
   m_Name: rock Cube
   m_TagString: Untagged
@@ -11008,7 +10732,7 @@ MonoBehaviour:
   focusEnabled: 1
   prefab: {fileID: 1083549605185280, guid: afaef0108a478c44a9eac26658bc29bf, type: 3}
   tooltipToggleAction:
-    id: 3
+    id: 0
     description: Grip Pose
     axisConstraint: 7
   appearType: 0
@@ -11082,18 +10806,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   elasticsManager: {fileID: 0}
---- !u!114 &1768406758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768406754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1768406759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11247,30 +10959,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768406754}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1768406766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768406754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1768406767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768406754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1849986744
 GameObject:
   m_ObjectHideFlags: 0
@@ -11860,11 +11548,8 @@ GameObject:
   - component: {fileID: 2042360097}
   - component: {fileID: 2042360096}
   - component: {fileID: 2042360095}
-  - component: {fileID: 2042360094}
   - component: {fileID: 2042360093}
   - component: {fileID: 2042360092}
-  - component: {fileID: 2042360103}
-  - component: {fileID: 2042360102}
   m_Layer: 0
   m_Name: black cube
   m_TagString: Untagged
@@ -11976,18 +11661,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   elasticsManager: {fileID: 0}
---- !u!114 &2042360094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042360090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2042360095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12141,30 +11814,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042360090}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2042360102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042360090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2042360103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042360090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2141194926
 GameObject:
   m_ObjectHideFlags: 0
@@ -12181,11 +11830,8 @@ GameObject:
   - component: {fileID: 2141194933}
   - component: {fileID: 2141194932}
   - component: {fileID: 2141194931}
-  - component: {fileID: 2141194930}
   - component: {fileID: 2141194929}
   - component: {fileID: 2141194928}
-  - component: {fileID: 2141194939}
-  - component: {fileID: 2141194938}
   m_Layer: 0
   m_Name: white Cube
   m_TagString: Untagged
@@ -12223,7 +11869,7 @@ MonoBehaviour:
   focusEnabled: 1
   prefab: {fileID: 1083549605185280, guid: afaef0108a478c44a9eac26658bc29bf, type: 3}
   tooltipToggleAction:
-    id: 3
+    id: 0
     description: Grip Pose
     axisConstraint: 7
   appearType: 0
@@ -12297,18 +11943,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   elasticsManager: {fileID: 0}
---- !u!114 &2141194930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141194926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4338a549f65a449ddfd2ebb34fd31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2141194931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12462,27 +12096,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141194926}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2141194938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141194926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2703a0026b6e077438e8a0cc649a9436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2141194939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141194926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d1bc9dbe7ad8c4997314762db02149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
