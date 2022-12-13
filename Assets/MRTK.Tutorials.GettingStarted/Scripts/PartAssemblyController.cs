@@ -90,6 +90,7 @@ namespace MRTK.Tutorials.GettingStarted
         /// </summary>
         public void Set()
         {
+
             // Update placement state
             isPlaced = true;
 
@@ -105,6 +106,7 @@ namespace MRTK.Tutorials.GettingStarted
             // Set parent and placement of object to target
             var trans = transform;
             trans.SetParent(locationToPlace.parent);
+            // Debug.Log(tra.parent.name);
             trans.position = locationToPlace.position;
             trans.rotation = locationToPlace.rotation;
         }
