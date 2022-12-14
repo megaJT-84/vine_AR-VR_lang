@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 namespace MRTK.Tutorials.GettingStarted
 {
@@ -10,6 +11,8 @@ namespace MRTK.Tutorials.GettingStarted
         public delegate void PartAssemblyControllerDelegate();
 
         [SerializeField] private Transform locationToPlace = default;
+        [SerializeField] private ExperimentWriter ew = default;
+
 
         private const float MinDistance = 0.001f;
         private const float MaxDistance = 0.1f;
@@ -109,6 +112,24 @@ namespace MRTK.Tutorials.GettingStarted
             // Debug.Log(tra.parent.name);
             trans.position = locationToPlace.position;
             trans.rotation = locationToPlace.rotation;
+
+            ToolTip tt = transform.GetComponent<ToolTip>();
+            string label = tt.ToolTipText;
+            string attachedObjname = locationToPlace.name;
+
+            Debug.Log(label + " " + attachedObjname);
+            Debug.Log(transform.position);
+            Debug.Log(transform.rotation);
+
+            Vector3 objRot = Quaternion.ToEulerAngles(transform.rotation);
+
+            if (ew != null)
+            {
+                ew.SaveExperimentData(System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + "," + label + "," + attachedObjname + "," + transform.position + "," + objRot);
+            }
+
+
+
         }
 
         /// <summary>

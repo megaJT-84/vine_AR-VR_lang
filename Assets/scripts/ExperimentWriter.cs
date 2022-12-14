@@ -15,7 +15,7 @@ using Windows.Storage;
 public class ExperimentWriter : MonoBehaviour
 {
     private string m_dataFolderPath;
-    private string m_dataFileName = "SpatialMemoryData ";
+    private string m_dataFileName = "MemoryPalaceData ";
     private string m_dataExtension = ".csv";
 
     private string m_experimentData;
@@ -46,7 +46,7 @@ public class ExperimentWriter : MonoBehaviour
         task.Wait();
         task.Result.Wait();
 #else
-        m_dataFileName = m_dataFileName + System.DateTime.UtcNow.ToString() + m_dataExtension;
+        m_dataFileName = m_dataFileName + System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + m_dataExtension;
         Stream stream = new FileStream(Path.Combine(m_dataFolderPath, m_dataFileName), FileMode.Append, FileAccess.Write);
         using (StreamWriter streamWriter = new StreamWriter(stream))
         {
@@ -65,7 +65,7 @@ public class ExperimentWriter : MonoBehaviour
 #if !UNITY_EDITOR && UNITY_METRO
         m_dataFolderPath = ApplicationData.Current.RoamingFolder.Path;
 #else
-        m_dataFolderPath = "C:\\Users\\vine2\\Desktop\\experiment data";
+        m_dataFolderPath = "C:\\Users\\vine2\\Desktop\\DataWritten";
 #endif
         Debug.Log("Data folder path: " + m_dataFolderPath);
 
