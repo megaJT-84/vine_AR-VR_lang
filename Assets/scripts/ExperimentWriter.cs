@@ -65,7 +65,7 @@ public class ExperimentWriter : MonoBehaviour
 #if !UNITY_EDITOR && UNITY_METRO
         m_dataFolderPath = ApplicationData.Current.RoamingFolder.Path;
 #else
-        m_dataFolderPath = "C:\\Users\\vine2\\Desktop\\DataWritten";
+        m_dataFolderPath = "C:\\Users\\vine2\\Desktop\\ExperimentData";
 #endif
         Debug.Log("Data folder path: " + m_dataFolderPath);
 

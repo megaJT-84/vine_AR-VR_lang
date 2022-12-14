@@ -11,7 +11,7 @@ namespace MRTK.Tutorials.GettingStarted
         public delegate void PartAssemblyControllerDelegate();
 
         [SerializeField] private Transform locationToPlace = default;
-        [SerializeField] private ExperimentWriter ew = default;
+        [SerializeField] private ExperimentWriter ExpWrite = default;
 
 
         private const float MinDistance = 0.001f;
@@ -107,28 +107,19 @@ namespace MRTK.Tutorials.GettingStarted
             if (hasToolTip) toolTipSpawner.enabled = false;
 
             // Set parent and placement of object to target
-            var trans = transform;
-            trans.SetParent(locationToPlace.parent);
+            var trans_placement = transform;
+            trans_placement.SetParent(locationToPlace.transform);
             // Debug.Log(tra.parent.name);
-            trans.position = locationToPlace.position;
-            trans.rotation = locationToPlace.rotation;
+            trans_placement.position = locationToPlace.position;
+            trans_placement.rotation = locationToPlace.rotation;
 
-            ToolTip tt = transform.GetComponent<ToolTip>();
-            string label = tt.ToolTipText;
+            ToolTip disp_text = transform.GetComponent<ToolTip>();
+            string label = disp_text.ToolTipText;
             string attachedObjname = locationToPlace.name;
 
             Debug.Log(label + " " + attachedObjname);
             Debug.Log(transform.position);
             Debug.Log(transform.rotation);
-
-            Vector3 objRot = Quaternion.ToEulerAngles(transform.rotation);
-
-            if (ew != null)
-            {
-                ew.SaveExperimentData(System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + "," + label + "," + attachedObjname + "," + transform.position + "," + objRot);
-            }
-
-
 
         }
 
@@ -192,6 +183,21 @@ namespace MRTK.Tutorials.GettingStarted
                 {
                     break;
                 }
+            }
+        }
+
+
+        public void Record_Info()
+        {
+            ToolTip disp_text = transform.GetComponent<ToolTip>();
+            string label = disp_text.ToolTipText;
+            string attachedObjname = locationToPlace.name;
+
+            Vector3 objRot = Quaternion.ToEulerAngles(transform.rotation);
+
+            if (ExpWrite != null)
+            {
+                ExpWrite.SaveExperimentData(System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + "," + label + "," + attachedObjname + "," + transform.position + "," + objRot);
             }
         }
 

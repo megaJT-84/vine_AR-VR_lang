@@ -38,7 +38,7 @@ public class Object_Recorder : MonoBehaviour
         //hp = go.GetComponent<HapticPlugin>();// grab the haptic actor component
         cup_transform = gameObject.GetComponent<Transform>();
 
-        string dir = "C:\\Users\\vine2\\Desktop\\experiment data";
+        string dir = "C:\\Users\\vine2\\Desktop\\ExperimentData";
         string fName = dataList.dataItems[0].name + ".csv";
         fileName = dir + "\\" + fName;
         if (!Directory.Exists(dir))
