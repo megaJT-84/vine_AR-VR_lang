@@ -18,5 +18,6 @@ EditorBuildSettings:
     path: Assets/Scenes/semantic connection.unity
     guid: 2d66b1b0f3b097c4bbb90e0174798e76
   m_configObjects:
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 31371a2d418e16c4c886daece8ed8ceb, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 190874cd40d69574ab71f220624b4c9c, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: aca21eaf65b7b194e89943fd502f6f33, type: 2}
