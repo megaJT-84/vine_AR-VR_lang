@@ -10,7 +10,7 @@ namespace MRTK.Tutorials.GettingStarted
     {
         public delegate void PartAssemblyControllerDelegate();
 
-        [SerializeField] private Transform locationToPlace = default;
+        [SerializeField] public Transform locationToPlace = default;
         [SerializeField] private ExperimentWriter ExpWrite = default;
 
 
@@ -109,7 +109,6 @@ namespace MRTK.Tutorials.GettingStarted
             // Set parent and placement of object to target
             var trans_placement = transform;
             trans_placement.SetParent(locationToPlace.transform);
-            // Debug.Log(tra.parent.name);
             trans_placement.position = locationToPlace.position;
             trans_placement.rotation = locationToPlace.rotation;
 
@@ -183,21 +182,6 @@ namespace MRTK.Tutorials.GettingStarted
                 {
                     break;
                 }
-            }
-        }
-
-
-        public void Record_Info()
-        {
-            ToolTip disp_text = transform.GetComponent<ToolTip>();
-            string label = disp_text.ToolTipText;
-            string attachedObjname = locationToPlace.name;
-
-            Vector3 objRot = Quaternion.ToEulerAngles(transform.rotation);
-
-            if (ExpWrite != null)
-            {
-                ExpWrite.SaveExperimentData(System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + "," + label + "," + attachedObjname + "," + transform.position + "," + objRot);
             }
         }
 
