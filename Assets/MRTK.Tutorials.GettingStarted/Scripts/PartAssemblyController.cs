@@ -27,6 +27,7 @@ namespace MRTK.Tutorials.GettingStarted
 
         private Transform originalParent;
         private Vector3 originalPosition;
+        private Vector3 originalScale;
         private Quaternion originalRotation;
 
         private IEnumerator checkPlacementCoroutine;
@@ -62,6 +63,7 @@ namespace MRTK.Tutorials.GettingStarted
 
             var trans = transform;
             originalParent = trans.parent;
+            originalScale = trans.localScale;
             originalPosition = trans.localPosition;
             originalRotation = trans.localRotation;
 
@@ -152,6 +154,7 @@ namespace MRTK.Tutorials.GettingStarted
             // Reset parent and placement of object
             var trans = transform;
             trans.SetParent(originalParent);
+            trans.localScale = originalScale;
             trans.localPosition = originalPosition;
             trans.localRotation = originalRotation;
         }

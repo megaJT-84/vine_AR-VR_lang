@@ -7,7 +7,6 @@ using UnityEngine.UIElements;
 
 public class ObjectReset : MonoBehaviour
 {
-    private bool isPlaced;
     private Transform originalParent;
     private Vector3 originalPosition;
     public Vector3 originalScale;
@@ -15,9 +14,9 @@ public class ObjectReset : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        var trans = transform;
-        originalScale= trans.localScale;
-        originalParent = trans.parent;
+        var trans = gameObject.transform;
+        originalParent = gameObject.transform.parent;
+        originalScale = trans.localScale;
         originalPosition = trans.localPosition;
         originalRotation = trans.localRotation;
 
@@ -26,9 +25,9 @@ public class ObjectReset : MonoBehaviour
     {
 
         // Reset parent and placement of object
-        var trans = transform;
+        var trans = gameObject.transform;
         trans.SetParent(originalParent);
-        trans.localScale = originalScale;   
+        trans.localScale = originalScale;
         trans.localPosition = originalPosition;
         trans.localRotation = originalRotation;
 
@@ -37,6 +36,6 @@ public class ObjectReset : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

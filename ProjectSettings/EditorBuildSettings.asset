@@ -17,7 +17,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/training scene.unity
     guid: 2d66b1b0f3b097c4bbb90e0174798e76
+  - enabled: 0
+    path: Assets/Scenes/sqaure.unity
+    guid: d5f0e5632a08e794ea3f03891b87e107
   m_configObjects:
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 8da6739aa21c63e448c400c509b0fe93, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 31371a2d418e16c4c886daece8ed8ceb, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 190874cd40d69574ab71f220624b4c9c, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: aca21eaf65b7b194e89943fd502f6f33, type: 2}

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - semantic_cues
+  - Interactable
   layers:
   - Default
   - TransparentFX

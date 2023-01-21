@@ -58,17 +58,17 @@ public class ExperimentWriter : MonoBehaviour
 
                     Debug.Log(label + " " + attachedObjname);
                 }
-                
+
 
                 Vector3 objRot = Quaternion.ToEulerAngles(target_Object[i].transform.rotation);
                 string scene_info = label + attachedObjname;
                 string scene_data_rot = objRot.ToString();
                 string scene_data_pos = target_Object[i].transform.position.ToString();
+                string scene_data_scale = target_Object[i].transform.localScale.ToString();
 
-                SaveExperimentData(System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + "," + label + "," + attachedObjname + "," + target_Object[i].transform.position.x +
-                    target_Object[i].transform.position.y +
-                    target_Object[i].transform.position.z + "," + 
-                    objRot.x + objRot.y + objRot.z);
+                SaveExperimentData(System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + "," + label + "," + attachedObjname + "," + target_Object[i].transform.localPosition.x + "__" + target_Object[i].transform.localPosition.y + "__" + target_Object[i].transform.localPosition.z + ","
+                    + objRot.x + "__" + objRot.y + "__" + objRot.z + ","
+                    + target_Object[i].transform.localScale.x + "__" + target_Object[i].transform.localScale.y + "__" + target_Object[i].transform.localScale.z);
             }
         }
     }
