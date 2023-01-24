@@ -11,7 +11,7 @@ namespace MRTK.Tutorials.GettingStarted
         public delegate void PartAssemblyControllerDelegate();
 
         [SerializeField] public Transform locationToPlace = default;
-        [SerializeField] private ExperimentWriter ExpWrite = default;
+        [SerializeField] private ExpWriter_PC_Unity_Editor ExpWrite = default;
 
 
         private const float MinDistance = 0.001f;

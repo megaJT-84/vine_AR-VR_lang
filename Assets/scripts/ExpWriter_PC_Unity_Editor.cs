@@ -16,13 +16,14 @@ using System.Threading.Tasks;
 using Windows.Storage;
 #endif
 
-public class ExperimentWriter : MonoBehaviour
+public class ExpWriter_PC_Unity_Editor : MonoBehaviour
 {
     [SerializeField] List<GameObject> target_Object;
     private string m_dataFolderPath;
     private string m_dataFileName = "MemoryPalaceData ";
     private string m_dataExtension = ".csv";
-
+    private string SessionFolderRoot = "Exp_data";
+    private string m_sessionPath;
     private string m_experimentData;
     public string ExperimentData
     {
@@ -105,6 +106,7 @@ public class ExperimentWriter : MonoBehaviour
 #endif
 
         Debug.Log("Saved data: " + data);
+
     }
 
 
@@ -118,5 +120,6 @@ public class ExperimentWriter : MonoBehaviour
         Debug.Log("Data folder path: " + m_dataFolderPath);
 
         DontDestroyOnLoad(gameObject);
+
     }
 }

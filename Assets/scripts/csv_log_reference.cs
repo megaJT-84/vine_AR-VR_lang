@@ -29,7 +29,7 @@ namespace holoutils
     /// 
     /// **Important: Requires the PicturesLibrary capability!**
     /// </summary>
-    public class CSVLogger : MonoBehaviour
+    public class csv_log_reference: MonoBehaviour
 
     {
         #region Constants to modify
