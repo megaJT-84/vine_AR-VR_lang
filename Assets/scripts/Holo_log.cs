@@ -53,6 +53,7 @@ namespace holoutils
         #endregion
         #region public members
         public string RecordingInstance => m_recording_time;
+        UnityEngine.TouchScreenKeyboard keyboard;
         public static string subject_name_holo = "";
         public string user_in;
 
@@ -70,8 +71,8 @@ namespace holoutils
             string rootPath = "";
 #if WINDOWS_UWP
             StorageFolder sessionParentFolder = await KnownFolders.PicturesLibrary.CreateFolderAsync(SessionFolderRoot,CreationCollisionOption.OpenIfExists);
-            StorageFile DataWritetoFile = await storageFolder.CreateFileAsync("Memory_Palace_Data.csv");
-            await FileIO.WriteTextAsync(DataWritetoFile, Add_DatatoRow);
+            StorageFile DataWritetoFile = await sessionParentFolder.CreateFileAsync("Memory_Palace_Data.csv");
+            await FileIO.WriteTextAsync(DataWritetoFile, "csv log not working why");
             rootPath = sessionParentFolder.Path;
 #else
             rootPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), SessionFolderRoot);
@@ -83,8 +84,9 @@ namespace holoutils
         }
 
 
-        public void FinalizeRecording()
+        async void FinalizeRecording()
         {
+            string rootPath = "";
             var list_length = target_Object.Count;
             for (int i = 0; i < list_length; i++)
             {
@@ -115,10 +117,17 @@ namespace holoutils
                     string scene_data_pos = target_Object[i].transform.localPosition.ToString();
                     string scene_data_scale = target_Object[i].transform.localScale.ToString();
 
-                    Add_DatatoRow(System.DateTime.UtcNow.ToString("_MM_dd_yyyy_HH_mm_ss") + "," + label + "," + attachedObjname + "," 
+                    string Row_data = (System.DateTime.UtcNow.ToString("MM_dd_HH:fmm_ss") + "," + label + "," + attachedObjname + ","
                         + target_Object[i].transform.localPosition.x + "__" + target_Object[i].transform.localPosition.y + "__" + target_Object[i].transform.localPosition.z + ","
                         + objRot.x + "__" + objRot.y + "__" + objRot.z + ","
                         + target_Object[i].transform.localScale.x + "__" + target_Object[i].transform.localScale.y + "__" + target_Object[i].transform.localScale.z);
+                    Add_DatatoRow(Row_data);
+#if WINDOWS_UWP
+            StorageFolder sessionParentFolder = await KnownFolders.PicturesLibrary.CreateFolderAsync(SessionFolderRoot, CreationCollisionOption.OpenIfExists);
+            StorageFile DataWritetoFile = await sessionParentFolder.CreateFileAsync("Memory_Palace_Data.csv");
+            await FileIO.WriteTextAsync(DataWritetoFile, Row_data);
+            rootPath = sessionParentFolder.Path;
+#endif
                 }
             }
         }
@@ -128,13 +137,11 @@ namespace holoutils
         {
             //var user_in = GetComponent<Text>();
             //string subject_name_unity = user_in.ToString();
-
-            UnityEngine.TouchScreenKeyboard keyboard;
             keyboard = TouchScreenKeyboard.Open("Enter your name");
             subject_name_holo = keyboard.text;
 
-            m_recording_time = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss_fff");
-            var filename = m_recording_time + "__" + File_suffix + ".csv";
+            m_recording_time = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss");
+            var filename = subject_name_holo + m_recording_time + "__" + File_suffix + ".csv";
             m_filePath = Path.Combine(m_sessionPath, filename);
             if (m_csvData != null)
             {
@@ -201,4 +208,5 @@ namespace holoutils
         }
 
     }
+
 }
