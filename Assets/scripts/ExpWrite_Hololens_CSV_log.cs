@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 #if WINDOWS_UWP
 using Windows.Storage;
 #endif
@@ -36,10 +37,10 @@ namespace holoutils
     {
         [SerializeField] List<GameObject> target_Object;
         #region Constants to modify
+        public string user_in = "";
         private const string File_suffix = "Memory_Palace_Data";
         private const string data_extension = ".csv";
-        private const string CSVHeader = "Timestamp, tooltip, object_name," +
-                                        "position, rotation, scale";
+        private const string CSVHeader = "Timestamp,tooltip,object_name,position,rotation,scale";
         private const string SessionFolderRoot = "Exp_record";
         #endregion
 
@@ -55,7 +56,6 @@ namespace holoutils
         public string RecordingInstance => m_recording_time;
         //UnityEngine.TouchScreenKeyboard keyboard;
         //public static string subject_name_holo = "";
-        private string user_in;
 
         private string Row_data = "";
 
@@ -146,7 +146,7 @@ namespace holoutils
             //subject_name_holo = keyboard.text;
 
             m_recording_time = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss");
-            var filename = m_recording_time + "__" + File_suffix + ".csv";
+            var filename = m_recording_time + "__" + user_in + "__" + File_suffix + data_extension;
             m_filePath = Path.Combine(m_sessionPath, filename);
             if (m_csvData != null)
             {

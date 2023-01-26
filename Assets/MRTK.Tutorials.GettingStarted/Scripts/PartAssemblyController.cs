@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using holoutils;
 using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
@@ -11,7 +12,7 @@ namespace MRTK.Tutorials.GettingStarted
         public delegate void PartAssemblyControllerDelegate();
 
         [SerializeField] public Transform locationToPlace = default;
-        [SerializeField] private ExpWriter_PC_Unity_Editor ExpWrite = default;
+        [SerializeField] private CSV_log ExpDataWrite = default;
 
 
         private const float MinDistance = 0.001f;
