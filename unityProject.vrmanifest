@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.vine_gr_project_arvr_language.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\GR projects\\landrover\\vine_AR-VR_lang\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\Nicko\\Documents\\GitHub\\vine_AR-VR_lang\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Vine_GR_project_AR/VR_language [Testing]"
