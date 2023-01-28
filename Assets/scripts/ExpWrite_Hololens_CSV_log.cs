@@ -138,6 +138,15 @@ namespace holoutils
 #endif
         }
 
+
+        public void Update()
+        {
+            if (Input.GetButtonDown("q"))
+            {
+                FinalizeRecording();
+            }
+        }
+
         public void StartNewCSV()
         {
             //var user_in = GetComponent<Text>();
