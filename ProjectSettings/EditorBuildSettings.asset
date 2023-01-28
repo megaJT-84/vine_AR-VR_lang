@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/test.unity
     guid: 8dfd0c328495370478fd79b74f976dd0
   - enabled: 0
-    path: Assets/Scenes/vr scene.unity
+    path: Assets/Scenes/vr scene Lidar scan.unity
     guid: f7e2199972f3b714e98c1ea269794e47
   - enabled: 0
     path: Assets/Scenes/training scene.unity
@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/sqaure.unity
     guid: d5f0e5632a08e794ea3f03891b87e107
+  - enabled: 0
+    path: Assets/Scenes/AR scene set B.unity
+    guid: 4b3344f46d09ac845acb5245f0069dfc
+  - enabled: 0
+    path: Assets/Scenes/AR scene set C.unity
+    guid: 3a8b6504dfffaae44bc2ccb2e93b188d
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 8da6739aa21c63e448c400c509b0fe93, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 31371a2d418e16c4c886daece8ed8ceb, type: 2}

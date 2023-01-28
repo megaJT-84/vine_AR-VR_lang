@@ -1,3 +1,4 @@
+using Valve.VR.InteractionSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Assertions.Must;
@@ -11,12 +12,8 @@ using System.IO;
 using Unity.XR.CoreUtils;
 using System.Linq;
 
-#if !UNITY_EDITOR && UNITY_METRO
-using System.Threading.Tasks;
-using Windows.Storage;
-#endif
 
-public class ExpWriter_PC_Unity_Editor : MonoBehaviour
+public class Events : MonoBehaviour
 {
     [SerializeField] List<GameObject> target_Object;
     private string m_dataFolderPath;
@@ -25,17 +22,7 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
     private string SessionFolderRoot = "Exp_data";
     private string m_sessionPath;
     private string m_experimentData;
-    public string ExperimentData
-    {
-        get
-        {
-            return m_experimentData;
-        }
-    }
-
-
-
-    public void FinalizeRecording()
+    public void OnPress(Hand hand)
     {
         var list_length = target_Object.Count;
         for (int i = 0; i < list_length; i++)
@@ -74,7 +61,6 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
 
     private void SaveExperimentData(string data)
     {
@@ -108,6 +94,12 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
         Debug.Log("Saved data: " + data);
 
     }
+
+    public void OnCustomButtonPress()
+    {
+        Debug.Log("We pushed our custom button!");
+    }
+
     private void Start()
     {
 #if !UNITY_EDITOR && UNITY_METRO
