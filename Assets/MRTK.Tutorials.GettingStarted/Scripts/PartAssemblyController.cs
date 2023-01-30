@@ -13,6 +13,7 @@ namespace MRTK.Tutorials.GettingStarted
 
         [SerializeField] public Transform locationToPlace = default;
         [SerializeField] private CSV_log ExpDataWrite = default;
+        //[SerializeField] public Transform object_parent = default;
 
 
         private const float MinDistance = 0.001f;
@@ -120,8 +121,9 @@ namespace MRTK.Tutorials.GettingStarted
             string attachedObjname = locationToPlace.name;
 
             Debug.Log(label + " " + attachedObjname);
-            Debug.Log(transform.position);
-            Debug.Log(transform.rotation);
+            Debug.Log(transform.localPosition);
+            Debug.Log(transform.localRotation);
+            Debug.Log(transform.localScale);
 
         }
 
