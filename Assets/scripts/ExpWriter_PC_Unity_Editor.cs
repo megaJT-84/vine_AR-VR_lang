@@ -10,8 +10,6 @@ using System;
 using System.IO;
 using Unity.XR.CoreUtils;
 using System.Linq;
-using System.Diagnostics.CodeAnalysis;
-using UnityEditor.PackageManager.Requests;
 
 #if !UNITY_EDITOR && UNITY_METRO
 using System.Threading.Tasks;
@@ -23,40 +21,20 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
     [SerializeField] List<GameObject> target_Object;
     private string m_dataFolderPath;
     private string m_dataFileName = "MemoryPalaceData ";
-    private const string CSVHeader = "Timestamp,tooltip,object_name,position,rotation,scale";
     private string m_dataExtension = ".csv";
     private string SessionFolderRoot = "Exp_data";
     private string m_sessionPath;
     private string m_experimentData;
-
-    //public string ExperimentData
-    //{
-    //    get
-    //    {
-    //        return m_experimentData;
-    //    }
-    //}
-
-    private void Start()
+    public string ExperimentData
     {
-#if !UNITY_EDITOR && UNITY_METRO
-        m_dataFolderPath = ApplicationData.Current.RoamingFolder.Path;
-#else
-        m_dataFolderPath = "C:\\Users\\vine2\\Desktop\\ExperimentData";
-#endif
-        Debug.Log("Data folder path: " + m_dataFolderPath);
-
-        DontDestroyOnLoad(gameObject);
-
-    }
-
-    public void Update()
-    {
-        if (Input.GetKey(KeyCode.Q))
+        get
         {
-            FinalizeRecording();
+            return m_experimentData;
         }
     }
+
+
+
     public void FinalizeRecording()
     {
         var list_length = target_Object.Count;
@@ -70,9 +48,7 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
                 {
                     ToolTip tt = target_Object[i].transform.GetComponentInChildren<ToolTip>();
                     label = tt.ToolTipText;
-                    Debug.Log(tt != null);
                     attachedObjname = target_Object[i].name;
-                   
 
                     Debug.Log(label + " " + attachedObjname);
                 }
@@ -84,21 +60,16 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
                     Debug.Log(label + " " + attachedObjname);
                 }
 
+
                 Vector3 objRot = Quaternion.ToEulerAngles(target_Object[i].transform.rotation);
                 string scene_info = label + attachedObjname;
                 string scene_data_rot = objRot.ToString();
                 string scene_data_pos = target_Object[i].transform.position.ToString();
                 string scene_data_scale = target_Object[i].transform.localScale.ToString();
 
-                SaveExperimentData(System.DateTime.Now.ToString("_MM_dd_yyyy_HH_mm_ss") + "," + label + "," + attachedObjname + "," 
-                    + target_Object[i].transform.localPosition.x + "," + target_Object[i].transform.localPosition.y + "," + target_Object[i].transform.localPosition.z + ","
-                    + objRot.x + "," + objRot.y + "," + objRot.z + ","
-                    + target_Object[i].transform.localScale.x + "," + target_Object[i].transform.localScale.y + "," + target_Object[i].transform.localScale.z);
-                if (i == list_length - 1)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    SaveExperimentData( "<><><><><><> this is the last item!!!!!! it's all repeat after this. cut here!!!!! <><><><><><>");
-                }
+                SaveExperimentData(System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + "," + label + "," + attachedObjname + "," + target_Object[i].transform.localPosition.x + "__" + target_Object[i].transform.localPosition.y + "__" + target_Object[i].transform.localPosition.z + ","
+                    + objRot.x + "__" + objRot.y + "__" + objRot.z + ","
+                    + target_Object[i].transform.localScale.x + "__" + target_Object[i].transform.localScale.y + "__" + target_Object[i].transform.localScale.z);
             }
         }
     }
@@ -124,7 +95,7 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
         task.Wait();
         task.Result.Wait();
 #else
-        string m_dataFileName_f = m_dataFileName + System.DateTime.Now.ToString("MM_dd_HH_mm_ss") + m_dataExtension;
+        string m_dataFileName_f = m_dataFileName + System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + m_dataExtension;
         Stream stream = new FileStream(Path.Combine(m_dataFolderPath, m_dataFileName_f), FileMode.Append, FileAccess.Write);
         using (StreamWriter streamWriter = new StreamWriter(stream))
         {
@@ -135,6 +106,18 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
 #endif
 
         Debug.Log("Saved data: " + data);
+
+    }
+    private void Start()
+    {
+#if !UNITY_EDITOR && UNITY_METRO
+        m_dataFolderPath = ApplicationData.Current.RoamingFolder.Path;
+#else
+        m_dataFolderPath = "C:\\Users\\vine2\\Desktop\\ExperimentData";
+#endif
+        Debug.Log("Data folder path: " + m_dataFolderPath);
+
+        DontDestroyOnLoad(gameObject);
 
     }
 }

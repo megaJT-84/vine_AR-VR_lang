@@ -6,7 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - enabled: 0
+=======
+  - enabled: 1
+>>>>>>> parent of 5d3a684 (final)
     path: Assets/Scenes/AR scene set A.unity
 =======
   - enabled: 1
@@ -25,7 +29,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/sqaure.unity
     guid: d5f0e5632a08e794ea3f03891b87e107
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AR scene set B.unity
     guid: 4b3344f46d09ac845acb5245f0069dfc
   - enabled: 0
