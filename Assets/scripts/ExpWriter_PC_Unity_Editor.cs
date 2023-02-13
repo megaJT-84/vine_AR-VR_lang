@@ -67,9 +67,13 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
                 string scene_data_pos = target_Object[i].transform.position.ToString();
                 string scene_data_scale = target_Object[i].transform.localScale.ToString();
 
-                SaveExperimentData(System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + "," + label + "," + attachedObjname + "," + target_Object[i].transform.localPosition.x + "__" + target_Object[i].transform.localPosition.y + "__" + target_Object[i].transform.localPosition.z + ","
-                    + objRot.x + "__" + objRot.y + "__" + objRot.z + ","
-                    + target_Object[i].transform.localScale.x + "__" + target_Object[i].transform.localScale.y + "__" + target_Object[i].transform.localScale.z);
+                SaveExperimentData(System.DateTime.UtcNow.ToString("_MMddyyyy_HHmmss") + "," + label + "," + attachedObjname + "," + target_Object[i].transform.localPosition.x + "," + target_Object[i].transform.localPosition.y + "," + target_Object[i].transform.localPosition.z + ","
+                    + objRot.x + "," + objRot.y + "," + objRot.z + ","
+                    + target_Object[i].transform.localScale.x + "," + target_Object[i].transform.localScale.y + "," + target_Object[i].transform.localScale.z);
+                if (i == list_length-1)
+                {
+                    SaveExperimentData(attachedObjname + "<><><><><><> this is the last item, cut here. <><><><><><>");
+                }
             }
         }
     }
@@ -119,5 +123,12 @@ public class ExpWriter_PC_Unity_Editor : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            FinalizeRecording();
+        }
     }
 }

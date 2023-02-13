@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 #if WINDOWS_UWP
 using Windows.Storage;
 #endif
@@ -36,11 +37,9 @@ namespace holoutils
     {
         [SerializeField] List<GameObject> target_Object;
         #region Constants to modify
-        public string user_in = "";
         private const string File_suffix = "Memory_Palace_Data";
         private const string data_extension = ".csv";
-        private const string CSVHeader = "Timestamp, tooltip, object_name," +
-                                        "position, rotation, scale";
+        private const string CSVHeader = "Timestamp,tooltip,object_name,position,rotation,scale";
         private const string SessionFolderRoot = "Exp_record";
         #endregion
 
@@ -56,7 +55,6 @@ namespace holoutils
         public string RecordingInstance => m_recording_time;
         //UnityEngine.TouchScreenKeyboard keyboard;
         //public static string subject_name_holo = "";
-        private string user_in;
 
         private string Row_data = "";
 
@@ -119,13 +117,13 @@ namespace holoutils
 
                     Vector3 objRot = Quaternion.ToEulerAngles(target_Object[i].transform.localRotation);
                     string scene_info = label + attachedObjname;
-                    string scene_data_rot = objRot.ToString();
+                    string scene_data_rot = target_Object[i].transform.localRotation.ToString();
                     string scene_data_pos = target_Object[i].transform.localPosition.ToString();
                     string scene_data_scale = target_Object[i].transform.localScale.ToString();
 
                     Row_data = (System.DateTime.UtcNow.ToString("MM_dd_HH:fmm_ss") + "," + label + "," + attachedObjname + ","
                         + target_Object[i].transform.localPosition.x + "__" + target_Object[i].transform.localPosition.y + "__" + target_Object[i].transform.localPosition.z + ","
-                        + objRot.x + "__" + objRot.y + "__" + objRot.z + ","
+                        + target_Object[i].transform.localRotation.x + "__" + target_Object[i].transform.localRotation.y + "__" + target_Object[i].transform.localRotation.z + ","
                         + target_Object[i].transform.localScale.x + "__" + target_Object[i].transform.localScale.y + "__" + target_Object[i].transform.localScale.z);
                     Add_DatatoRow(Row_data);
                 }
@@ -138,16 +136,6 @@ namespace holoutils
                     await FileIO.WriteTextAsync(DataWritetoFile, m_csvData.ToString());                                                                                                                                                                                                     
 #endif
         }
-
-
-        public void Update()
-        {
-            if (Input.GetButtonDown("q"))
-            {
-                FinalizeRecording();
-            }
-        }
-
         public void StartNewCSV()
         {
             //var user_in = GetComponent<Text>();
@@ -156,15 +144,7 @@ namespace holoutils
             //subject_name_holo = keyboard.text;
 
             m_recording_time = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss");
-<<<<<<< HEAD
-<<<<<<< HEAD
             var filename = m_recording_time + "__" + File_suffix + data_extension;
-=======
-            var filename = m_recording_time + "__" + File_suffix + ".csv";
->>>>>>> parent of 9ac2009 (final AR scenes)
-=======
-            var filename = m_recording_time + "__" + user_in + "__" + File_suffix + data_extension;
->>>>>>> parent of 5d3a684 (final)
             m_filePath = Path.Combine(m_sessionPath, filename);
             if (m_csvData != null)
             {
@@ -210,7 +190,9 @@ namespace holoutils
 
         private void Add_DatatoRow(string data_stream)
         {
+            Debug.Log(m_csvData != null);
             m_csvData.AppendLine(data_stream);
+            Debug.Log(data_stream);
         }
 
         /// <summary>
@@ -225,6 +207,7 @@ namespace holoutils
             }
             m_csvData.Clear();
         }
+
         /// <summary>
         /// Returns a row populated with common start data like
         /// recording id, session id, timestamp

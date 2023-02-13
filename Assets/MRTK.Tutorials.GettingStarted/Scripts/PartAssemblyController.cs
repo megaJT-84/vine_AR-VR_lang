@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using holoutils;
 using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
@@ -11,12 +12,8 @@ namespace MRTK.Tutorials.GettingStarted
         public delegate void PartAssemblyControllerDelegate();
 
         [SerializeField] public Transform locationToPlace = default;
-<<<<<<< HEAD
         [SerializeField] private CSV_log ExpDataWrite = default;
         //[SerializeField] public Transform object_parent = default;
-=======
-        [SerializeField] private ExpWriter_PC_Unity_Editor ExpWrite = default;
->>>>>>> parent of 9ac2009 (final AR scenes)
 
 
         private const float MinDistance = 0.001f;
